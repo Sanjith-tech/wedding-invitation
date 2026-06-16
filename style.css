@@ -2004,11 +2004,13 @@ section h2{
     }
 
     /* Details card */
-    .details-card {
-        width: 90%;
-        padding: 20px;
-    }
+    .details-card{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
 
+    padding:60px 30px;
+}
     /* Gallery images */
     .slide {
         height: auto;
@@ -2683,6 +2685,7 @@ p{
 }
 /* ===== GLOBAL MOBILE LAYOUT ===== */
 
+
 section,
 .hero,
 #celebration,
@@ -2690,35 +2693,32 @@ section,
 #location,
 #rsvp,
 #guestbook,
-.captured-moments,
-#countdown-title{
-
-    width:92%;
-    max-width:700px;
-
-    margin:40px auto;
-
-    padding:30px 20px;
-
+.captured-moments{
+    width:100%;
+    max-width:none;
+    margin:0;
+    padding:100px 20px;
     box-sizing:border-box;
-
-    border-radius:35px;
-
-    background:rgba(255,255,255,0.15);
-
-    backdrop-filter:blur(10px);
 }
 .hero{
-
+    position:relative;
+    width:100vw;
     min-height:100vh;
 
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 
     text-align:center;
 
-    padding:120px 20px 80px;
+    padding:0 20px;
+    overflow:hidden;
+}
+
+.hero-content{
+    width:100%;
+    max-width:1000px;
+    z-index:10;
 }
 #countdown{
 
@@ -2839,13 +2839,13 @@ section,
 #location,
 #rsvp,
 #guestbook,
-.captured-moments,
-#countdown-title{
-
-    width:95%;
-    padding:25px 15px;
+.captured-moments{
+    width:100%;
+    max-width:none;
+    margin:0;
+    padding:100px 20px;
+    box-sizing:border-box;
 }
-
 .couple-names{
 
     font-size:2.6rem;
@@ -2869,4 +2869,96 @@ section,
     margin-left:-60px;
     margin-top:-85px;
 }
+}
+
+    #curtain-screen{
+    position:fixed;
+    inset:0;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    z-index:999999;
+}
+
+.curtain{
+    position:absolute;
+    top:0;
+    width:50vw;
+    height:100vh;
+}
+    #guestbook{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+}
+.captured-moments{
+    width:100%;
+    overflow:hidden;
+    padding:80px 0;
+}
+
+.photo-stream{
+    display:flex;
+    gap:20px;
+    width:max-content;
+
+    animation:scrollGallery 30s linear infinite;
+}
+
+.photo-stream img{
+    width:260px;
+    height:360px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    flex-shrink:0;
+}
+
+@keyframes scrollGallery{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+@media(max-width:768px){
+
+    .photo-stream img{
+        width:180px;
+        height:260px;
+    }
+}
+    @media(max-width:768px){
+
+    html,
+    body{
+        overflow-x:hidden;
+    }
+
+    section,
+    .hero,
+    #details,
+    #location,
+    #guestbook,
+    .captured-moments{
+        width:100%;
+        max-width:none;
+        margin:0;
+        padding:80px 15px;
+    }
+
+    .details-card,
+    .fun-card{
+        width:100%;
+        max-width:none;
+    }
+
+    .hero-content{
+        width:100%;
+    }
 }
