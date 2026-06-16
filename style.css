@@ -457,17 +457,21 @@ linear-gradient(
     border-radius:50px;
 }
 .gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+   .gallery-container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+    height: auto;
 }
 
-.gallery-grid img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-    border-radius:20px;
-    transition:.4s;
+   .gallery-container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+    height: auto;
+}
 }
 
 .gallery-grid img:hover{
