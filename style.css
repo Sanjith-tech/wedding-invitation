@@ -2277,3 +2277,139 @@ section h2{
         grid-template-columns:1fr;
     }
 }
+.hero{
+    min-height:100vh;
+    padding:120px 20px 150px;
+}
+
+.hero-content{
+    max-width:100%;
+    text-align:center;
+}
+.couple-names{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+.bride,
+.groom{
+    font-size:clamp(2.2rem,8vw,5rem);
+    line-height:1.1;
+}
+
+.weds{
+    font-size:clamp(1.3rem,4vw,2rem);
+}
+#countdown{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    width:100%;
+    max-width:350px;
+    margin:auto;
+}
+.fun-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    align-items:stretch;
+}
+
+.fun-card{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
+#musicBtn{
+    top:15px;
+    right:15px;
+    z-index:9999;
+    max-width:220px;
+    font-size:14px;
+}
+.captured-moments{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.carousel{
+    position:relative;
+    height:450px;
+    width:100%;
+    margin:auto;
+    perspective:1200px;
+}
+
+.carousel-item{
+    position:absolute;
+    width:280px;
+    height:380px;
+    left:50%;
+    top:50%;
+    transform-style:preserve-3d;
+    animation:spin 20s linear infinite;
+}
+
+.carousel-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+.carousel-item:nth-child(1){
+    transform:translate(-50%,-50%) rotateY(0deg) translateZ(350px);
+}
+
+.carousel-item:nth-child(2){
+    transform:translate(-50%,-50%) rotateY(90deg) translateZ(350px);
+}
+
+.carousel-item:nth-child(3){
+    transform:translate(-50%,-50%) rotateY(180deg) translateZ(350px);
+}
+
+.carousel-item:nth-child(4){
+    transform:translate(-50%,-50%) rotateY(270deg) translateZ(350px);
+}
+.carousel{
+    animation:rotateCarousel 18s infinite linear;
+}
+
+@keyframes rotateCarousel{
+    from{
+        transform:rotateY(0deg);
+    }
+    to{
+        transform:rotateY(360deg);
+    }
+}
+@media(max-width:768px){
+
+    .carousel{
+        height:320px;
+    }
+
+    .carousel-item{
+        width:180px;
+        height:260px;
+    }
+
+    .carousel-item:nth-child(1){
+        transform:translate(-50%,-50%) rotateY(0deg) translateZ(180px);
+    }
+
+    .carousel-item:nth-child(2){
+        transform:translate(-50%,-50%) rotateY(90deg) translateZ(180px);
+    }
+
+    .carousel-item:nth-child(3){
+        transform:translate(-50%,-50%) rotateY(180deg) translateZ(180px);
+    }
+
+    .carousel-item:nth-child(4){
+        transform:translate(-50%,-50%) rotateY(270deg) translateZ(180px);
+    }
+}
