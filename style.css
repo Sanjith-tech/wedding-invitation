@@ -2413,3 +2413,102 @@ section h2{
         transform:translate(-50%,-50%) rotateY(270deg) translateZ(180px);
     }
 }
+.hero{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero-content{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+}.couple-names{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+}
+
+.bride,
+.groom{
+    font-size:clamp(3rem,10vw,7rem);
+    line-height:1;
+}
+
+.weds{
+    font-size:clamp(1.5rem,4vw,2.5rem);
+}
+.captured-moments{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.orbit-gallery{
+    position:relative;
+    width:100%;
+    max-width:600px;
+    height:500px;
+    margin:auto;
+    animation:spin 20s linear infinite;
+}
+
+.orbit-img{
+    position:absolute;
+    width:180px;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+.img1{
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.img2{
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.img3{
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.img4{
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+}
+@keyframes spin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+@media(max-width:768px){
+
+.orbit-gallery{
+    width:320px;
+    height:320px;
+}
+
+.orbit-img{
+    width:120px;
+    height:160px;
+}
+
+}
