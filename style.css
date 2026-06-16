@@ -2126,3 +2126,47 @@ section h2{
         transform:scale(0.85);
     }
 }
+.gallery-item {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.gallery-slide img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+.fun-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 90%;
+    margin: auto;
+}
+
+.fun-card {
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .fun-cards {
+        grid-template-columns: 1fr;
+    }
+}
+.gallery-section h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.gallery-container {
+    margin-top: 40px;
+}
