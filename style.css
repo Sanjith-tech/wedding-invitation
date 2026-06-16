@@ -2174,3 +2174,53 @@ section h2{
 .gallery-container {
     margin-top: 40px;
 }
+/* Captured Moments Slider */
+
+.captured-moments{
+    padding:80px 0;
+    overflow:hidden;
+    text-align:center;
+}
+
+.captured-moments h2{
+    font-size:3rem;
+    color:#ff5ca8;
+    margin-bottom:30px;
+}
+
+.photo-track{
+    display:flex;
+    gap:25px;
+    width:max-content;
+    animation:slideGallery 25s linear infinite;
+}
+
+.photo-track img{
+    width:300px;
+    height:400px;
+    object-fit:cover;
+    border-radius:20px;
+    flex-shrink:0;
+    box-shadow:0 8px 25px rgba(0,0,0,0.2);
+}
+
+@keyframes slideGallery{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+@media(max-width:768px){
+
+    .captured-moments h2{
+        font-size:2rem;
+    }
+
+    .photo-track img{
+        width:220px;
+        height:300px;
+    }
+}
