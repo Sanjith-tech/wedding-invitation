@@ -2252,21 +2252,32 @@ section h2{
         line-height: 1.1;
     }
 }
+.fun-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+    width:100%;
+}
+
 .fun-card{
+    width:100%;
+    max-width:none;
+
+    min-height:420px;
+
+    padding:50px 30px;
+
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
 
-    min-height:320px;
+    text-align:center;
+
+    overflow:hidden;
 }
 
-.fun-card h3{
-    min-height:90px;
-}
 
-.fun-card p{
-    min-height:160px;
 }
 .fun-grid{
     display:grid;
@@ -2953,12 +2964,177 @@ section,
     }
 
     .details-card,
-    .fun-card{
-        width:100%;
-        max-width:none;
-    }
+   .fun-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+    width:100%;
+}
+
+.fun-card{
+    width:100%;
+    max-width:none;
+
+    min-height:420px;
+
+    padding:50px 30px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+}
 
     .hero-content{
         width:100%;
+    }
+}
+    .fun-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+    width:100%;
+}
+
+.fun-card{
+    width:100%;
+    max-width:none;
+
+    min-height:420px;
+
+    padding:50px 30px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+}
+    .fun-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.fun-card{
+    min-height:450px;
+    height:450px;
+}
+   .couple{
+    opacity:1;
+
+    filter:
+        blur(0px)
+        brightness(1.15)
+        contrast(1.15);
+
+    object-fit:cover;
+}
+    
+.hero::before{
+    background:transparent;
+}
+    .captured-moments{
+    width:100%;
+    padding:80px 0;
+    overflow:hidden;
+    text-align:center;
+}
+
+.gallery-wrap{
+    position:relative;
+    overflow:hidden;
+    width:100%;
+}
+
+/* Fade edges */
+.gallery-wrap::before,
+.gallery-wrap::after{
+    content:"";
+    position:absolute;
+    top:0;
+    width:80px;
+    height:100%;
+    z-index:5;
+    pointer-events:none;
+}
+
+.gallery-wrap::before{
+    left:0;
+    background:linear-gradient(
+        to right,
+        rgba(255,255,255,1),
+        rgba(255,255,255,0)
+    );
+}
+
+.gallery-wrap::after{
+    right:0;
+    background:linear-gradient(
+        to left,
+        rgba(255,255,255,1),
+        rgba(255,255,255,0)
+    );
+}
+
+.photo-stream{
+    display:flex;
+    gap:20px;
+    width:max-content;
+
+    animation:scrollPhotos 35s linear infinite;
+}
+
+.photo-stream img{
+    width:260px;
+    height:360px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    flex-shrink:0;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.18);
+
+    transition:.4s;
+}
+
+.photo-stream img:hover{
+    transform:scale(1.05);
+}
+
+@keyframes scrollPhotos{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
+    @media(max-width:768px){
+
+    .photo-stream img{
+
+        width:180px;
+        height:260px;
+
+        border-radius:18px;
+    }
+
+    .gallery-wrap::before,
+    .gallery-wrap::after{
+
+        width:40px;
     }
 }
