@@ -2224,3 +2224,56 @@ section h2{
         height:300px;
     }
 }
+.hero,
+.home,
+#home {
+    min-height: 100vh;
+    height: auto;
+    padding: 80px 20px 40px;
+}
+
+.hero img,
+.background-image {
+    object-fit: cover;
+}
+@media (max-width: 768px) {
+
+    .hero,
+    .home,
+    #home {
+        min-height: auto;
+        padding-top: 60px;
+    }
+
+    .couple-names{
+        font-size: 2.8rem;
+        line-height: 1.1;
+    }
+}
+.fun-card{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    min-height:320px;
+}
+
+.fun-card h3{
+    min-height:90px;
+}
+
+.fun-card p{
+    min-height:160px;
+}
+.fun-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+@media(max-width:768px){
+    .fun-grid{
+        grid-template-columns:1fr;
+    }
+}
