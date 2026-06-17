@@ -3535,3 +3535,107 @@ section,
     font-size:clamp(1rem,3vw,1.3rem);
     line-height:1.8;
 }
+/* =========================
+   1. FIX SCROLL ISSUE
+   ========================= */
+
+html, body{
+    height:auto !important;
+    min-height:100%;
+    overflow-y:auto !important;
+    overflow-x:hidden !important;
+    scroll-behavior:smooth;
+}
+
+/* Prevent any section locking scroll */
+section{
+    height:auto !important;
+    min-height:auto !important;
+    overflow:visible !important;
+}
+
+/* =========================
+   2. FIX IMAGE NOT SHOWING
+   ========================= */
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+/* Captured images MUST be visible */
+.photo-stream img{
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+/* If images were hidden by animation bug */
+.photo-stream{
+    display:flex !important;
+    flex-wrap:nowrap;
+}
+
+/* =========================
+   3. FIX CAPTURED MOMENTS OVERLAP
+   ========================= */
+
+.captured-moments{
+    position:relative;
+    width:100%;
+    min-height:420px;
+    overflow:hidden;
+    z-index:2;
+}
+
+/* =========================
+   4. REMOVE BACKGROUND OVERLAY HIDE ISSUE
+   ========================= */
+
+.hero::before{
+    background:rgba(255,255,255,0.25) !important;
+}
+
+/* =========================
+   5. FORCE TEXT VISIBILITY
+   ========================= */
+
+h1, h2, h3, p{
+    opacity:1 !important;
+    visibility:visible !important;
+}
+
+/* Fix weak text on dark/blur backgrounds */
+.hero-content p,
+.celebration-text{
+    color:#3d2c35 !important;
+    font-weight:600;
+    text-shadow:0 0 10px rgba(255,255,255,0.6);
+}
+
+/* =========================
+   6. MOBILE SAFE LAYOUT FIX
+   ========================= */
+
+@media(max-width:768px){
+
+    body{
+        overflow-x:hidden !important;
+    }
+
+    .hero{
+        min-height:100vh;
+        height:auto !important;
+        padding-bottom:120px;
+    }
+
+    .captured-moments{
+        min-height:300px;
+    }
+
+    .photo-stream img{
+        width:180px !important;
+        height:260px !important;
+    }
+}
+
+    
