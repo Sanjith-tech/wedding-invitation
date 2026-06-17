@@ -3763,4 +3763,23 @@ img.couple {
     opacity: 0.08;
     filter: blur(2px) brightness(1.2);
 }
+    #curtain-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: auto;
+}
+
+#curtain-screen.open {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 1s ease;
+}
+    #openBtn {
+  position: relative;
+  z-index: 100000;
+  pointer-events: auto;
+  cursor: pointer;
+    }
     
