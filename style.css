@@ -3721,65 +3721,7 @@ document.addEventListener("DOMContentLoaded", () => {
 .fade-img.show {
   filter: blur(0);
 }
-    /* =========================
-   FIX COUPLE IMAGE VISIBILITY
-   ========================= */
 
-.couple,
-.hero .couple,
-img.couple {
-    opacity: 1 !important;
-    filter: none !important;
-    mix-blend-mode: normal !important;
-    transform: none !important;
-}
 
-/* if it is background image inside hero */
-.hero img.couple {
-    opacity: 1 !important;
-    filter: none !important;
-}
 
-/* =========================
-   KEEP ONLY WATERMARK FADE (NOT MAIN IMAGE)
-   ========================= */
-
-.watermark img {
-    opacity: 0.12 !important;   /* background soft fade */
-    filter: blur(1px) brightness(1.1);
-}
-
-/* HERO BACKGROUND OVERLAY FIX */
-.hero::before {
-    background: transparent !important;
-}
-    .couple {
-    opacity: 1;
-    filter: contrast(1.1) saturate(1.1);
-    z-index: 2;
-}
-
-.watermark img {
-    opacity: 0.08;
-    filter: blur(2px) brightness(1.2);
-}
-    #curtain-screen {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: auto;
-}
-
-#curtain-screen.open {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: 1s ease;
-}
-    #openBtn {
-  position: relative;
-  z-index: 100000;
-  pointer-events: auto;
-  cursor: pointer;
-    }
     
