@@ -350,7 +350,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
     </html>elivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-<div id="particles"></div>
+<div id="particles"></div
+                      <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const openBtn = document.getElementById("openBtn");
+  const curtain = document.getElementById("curtain-screen");
+
+  if (openBtn && curtain) {
+    openBtn.addEventListener("click", function () {
+      curtain.classList.add("open");
+
+      setTimeout(() => {
+        curtain.style.display = "none";
+      }, 2000);
+    });
+  }
+
+});
+                      </script>
 <script src="script.js"></script>
 
 </body>
