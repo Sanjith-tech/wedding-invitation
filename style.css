@@ -3754,6 +3754,33 @@ html, body {
     .hero::before{
     background:transparent !important;
 }
+.captured{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+}
 
+.fade-img{
+    width:90%;
+    max-width:350px;
 
+    opacity:0;
+    transform:translateY(50px);
+
+    transition:all 1.5s ease;
+}
+
+.fade-img.show{
+    opacity:1;
+    transform:translateY(0);
+}
+.watermark img{
+    opacity:1 !important;
+    filter:none !important;
+}
+
+.hero::before{
+    background:transparent !important;
+}
     
