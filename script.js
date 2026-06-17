@@ -331,3 +331,18 @@ window.addEventListener("click", function(e){
         modal.style.display = "none";
     }
 });
+document.addEventListener("DOMContentLoaded", () => {
+
+  const images = document.querySelectorAll(".fade-img");
+
+  images.forEach((img, index) => {
+
+    setTimeout(() => {
+
+      img.classList.add("show");
+
+    }, index * 2500);
+
+  });
+
+});
