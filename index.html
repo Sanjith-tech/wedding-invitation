@@ -335,40 +335,13 @@ class="btn">
   <img src="gallery3.jpeg" class="fade-img">
 </div>
 
-<!-- ✅ PASTE JS HERE (IMPORTANT) -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll(".fade-img");
 
-  images.forEach((img, index) => {
-    setTimeout(() => {
-      img.classList.add("show");
-    }, index * 1500);
-  });
-});
-</script>
 
 </body>
     </html>elivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
 <div id="particles"></div
                       <script>
-document.addEventListener("DOMContentLoaded", function () {
 
-  const openBtn = document.getElementById("openBtn");
-  const curtain = document.getElementById("curtain-screen");
-
-  if (openBtn && curtain) {
-    openBtn.addEventListener("click", function () {
-      curtain.classList.add("open");
-
-      setTimeout(() => {
-        curtain.style.display = "none";
-      }, 2000);
-    });
-  }
-
-});
-                      </script>
 <script src="script.js"></script>
 
 </body>
