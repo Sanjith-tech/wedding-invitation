@@ -256,16 +256,11 @@ type="audio/mpeg">
 
     <h2>Captured Moments</h2>
 
-    <div class="photo-stage">
-
-        <img src="gallery1.jpeg">
-        <img src="gallery2.jpeg">
-        <img src="gallery3.jpeg">
-        <img src="gallery4.jpeg">
-        
-        
-        
-
+    <div class="captured">
+  <img src="gallery1.jpeg" class="fade-img">
+  <img src="gallery2.jpeg" class="fade-img">
+  <img src="gallery3.jpeg" class="fade-img">
+  <img src="gallery4.jpeg" class="fade-img">
     </div>
 
 </section>
@@ -331,7 +326,30 @@ class="btn">
         </a>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+<script src="https://cdn.jsd
+  <!-- ALL YOUR HTML CONTENT ABOVE -->
+
+<div class="captured">
+  <img src="gallery1.jpeg" class="fade-img">
+  <img src="gallery2.jpeg" class="fade-img">
+  <img src="gallery3.jpeg" class="fade-img">
+</div>
+
+<!-- ✅ PASTE JS HERE (IMPORTANT) -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".fade-img");
+
+  images.forEach((img, index) => {
+    setTimeout(() => {
+      img.classList.add("show");
+    }, index * 1500);
+  });
+});
+</script>
+
+</body>
+    </html>elivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
 <div id="particles"></div>
 <script src="script.js"></script>
 
